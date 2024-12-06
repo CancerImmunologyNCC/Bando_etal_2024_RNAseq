@@ -9,9 +9,9 @@ library(edgeR)
 library(ggplot2)
 library(DESeq2)
 
-GeneCount <- path/to/GeneCount.csv
-metadata <- path/to/metadata
-OUTPUT_PATH <- path/to/output
+GeneCount <- "path/to/GeneCount.csv"
+metadata <- "path/to/metadata"
+OUTPUT_PATH <- "path/to/output"
 
 ################################################################################
 # data import
