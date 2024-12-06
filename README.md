@@ -1,6 +1,6 @@
 # Bulk RNA-seq Analysis Workflow
 
-This repository contains scripts and instructions for the bulk RNA-seq analysis workflow used in "Atezolizumab following definitive chemoradiotherapy in patients with unresectable locally advanced esophageal squamous cell carcinoma – a multicenter phase 2 trial (EPOC1802)" . 
+This repository contains scripts for the bulk RNA-seq analysis workflow used in "Atezolizumab following definitive chemoradiotherapy in patients with unresectable locally advanced esophageal squamous cell carcinoma – a multicenter phase 2 trial (EPOC1802)" . 
 This repository contains scripts for processing and analyzing bulk RNA sequencing data, including quality control, alignment, expression quantification, differential expression analysis, and enrichment analysis (GSEA and ssGSEA). 
 
 
