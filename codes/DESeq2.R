@@ -66,8 +66,10 @@ fwrite(res,paste0(OUTPUT_PATH,"CRvsNonCRinPre_DESeq2_results.txt"),sep="\t")
 
 ### Select samples
 group <- metadata %>% 
-         filter(Treatment!=3) %>% group_by(PatientID) %>% mutate(n=n()) %>%  filter(n == 2) %>%
-         select(SampleID,PatientID, Treatment) %>% arrange( - Treatment) %>% mutate(Treatment=factor(Treatment))
+         filter(Treatment!=3) %>% group_by(PatientID) %>% 
+         mutate(n=n()) %>%  filter(n == 2) %>%
+         select(SampleID,PatientID, Treatment) %>% 
+         arrange( - Treatment) %>% mutate(Treatment=factor(Treatment))
 testdat <- dat[,group$SampleID]
 
 ### filtered out low expressed genes
@@ -83,7 +85,7 @@ dds <- estimateDispersions(dds)
 dds <- nbinomLRT(dds, full = ~ PatientID +  Treatment, reduced = ~ PatientID)
 res <- results(dds,tidy=TRUE)
 res <- cbind(res,testdat) 
-res %>% arrange(padj,pvalue) %>% head(10)
+res %>% arrange(padj,pvalue)
 colnames(res)[1] <- "SYMBOL"
 
 fwrite(res,paste0(OUTPUT_PATH,"afterCRTvsPreinall_DESeq2_results.txt"),sep="\t")
