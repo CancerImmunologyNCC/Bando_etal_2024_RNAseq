@@ -22,9 +22,9 @@ This pipeline was developed for analyzing paired tumor RNA-seq samples. It inclu
 ├── codes/                  # Analysis scripts
 │   ├── trimming_fastq.sh     # Step 1: Adapter trimming
 │   ├── filter_rRNA.sh        # Step 2: rRNA filtering
-│   ├── STAR_Stringtie.sh     # Step 3-4: Alignment and expression quantification
-│   ├── DESeq2.R              # Step 5: Differential expression analysis
-│   ├── volcanoplot.R         # Step 5 (optional): Volcano plot generation
+│   ├── STAR_Stringtie.sh     # Step 3: Alignment and expression quantification
+│   ├── DESeq2.R              # Step 4: Differential expression analysis
+│   ├── volcanoplot.R         # Step 5: Volcano plot generation
 │   ├── GSEA.R                # Step 6: GSEA
 │   └── ssGSEA.R              # Step 6: ssGSEA
 └── README.md                 # This file
