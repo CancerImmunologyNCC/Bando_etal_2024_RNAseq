@@ -4,7 +4,7 @@ library(data.table)
 library(dplyr)
 library(ggplot2)
 
-DESeq2result <- /path/to/DESeq2
+DESeq2result <- "/path/to/DESeq2"
 dat <- paste0(DESeq2result,"/DESeq2_result.txt") %>% fread()
 
 # the code example about afterCRT vs pre in all patients 
